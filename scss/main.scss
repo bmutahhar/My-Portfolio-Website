@@ -68,4 +68,31 @@ img {
   gap: 1.5rem;
 }
 
+/*============================= BUTTONS ==================================*/
+.button {
+  display: inline-block;
+  background-color: $first-color;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: $font-medium;
+  transition: 0.3s;
+  &:hover {
+    background-color: $first-color-alt;
+  }
+  &__icon {
+    font-size: 1.25rem;
+    margin-left: $mb-0-5;
+    transition: 0.3s;
+  }
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+/*============================= IMPORTS ==================================*/
+
 @import "nav-bar";
+@import "home";
