@@ -1,0 +1,37 @@
+.about {
+  &__img {
+    width: 200px;
+    border-radius: 0.5rem;
+    justify-self: center;
+    align-self: center;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: $mb-2-5;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: $mb-2-5;
+    &-name {
+      font-size: $smaller-font-size;
+      display: block;
+      text-align: center;
+    }
+    &-title {
+      display: block;
+      text-align: center;
+      font-size: $h2-font-size;
+      font-weight: $font-semi-bold;
+      color: $title-color;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
