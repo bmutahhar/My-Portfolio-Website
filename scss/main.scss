@@ -92,9 +92,26 @@ img {
   align-items: center;
 }
 
+.button--small {
+  padding: 0.75rem 1rem;
+}
+
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  color: $first-color;
+
+  &:hover {
+    background-color: transparent;
+    color: $first-color-alt;
+  }
+}
+
 /*============================= IMPORTS ==================================*/
 
 @import "nav-bar";
 @import "home";
 @import "about";
 @import "skills";
+@import "qualifications";
+@import "services";

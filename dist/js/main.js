@@ -51,7 +51,45 @@ skillsHeader.forEach((el) => {
 
 /*==================== QUALIFICATION TABS ====================*/
 
+const tabs = document.querySelectorAll("[data-target]"),
+  tabContents = document.querySelectorAll("[data-content]");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("qualification__active");
+    });
+    target.classList.add("qualification__active");
+    tabs.forEach((el) => {
+      el.classList.remove("qualification__active");
+    });
+    tab.classList.add("qualification__active");
+  });
+});
+
 /*==================== SERVICES MODAL ====================*/
+const modalViews = document.querySelectorAll(".services__modal");
+const modalBtns = document.querySelectorAll(".services__button");
+const modalCloses = document.querySelectorAll(".services__modal-close");
+
+let modalOnClick = (modalIndex) => {
+  modalViews[modalIndex].classList.add("active-modal");
+};
+
+modalBtns.forEach((btn, i) => {
+  btn.addEventListener("click", () => {
+    modalOnClick(i);
+  });
+});
+
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener("click", () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove("active-modal");
+    });
+  });
+});
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 

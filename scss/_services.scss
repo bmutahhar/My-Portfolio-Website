@@ -1,0 +1,97 @@
+.services {
+  &__container {
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__content {
+    position: relative;
+    background-color: $container-color;
+    padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.15);
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 4px 8px rgba($color: #000000, $alpha: 0.25);
+    }
+  }
+
+  &__icon {
+    display: block;
+    font-size: 1.5rem;
+    color: $first-color;
+    margin-bottom: $mb-1;
+  }
+
+  &__title {
+    font-size: $h3-font-size;
+    font-weight: $font-medium;
+    margin-bottom: $mb-1;
+  }
+  &__button {
+    cursor: pointer;
+    font-size: $small-font-size;
+    &:hover {
+      .button__icon {
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+
+  &__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    z-index: $z-modal;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  }
+
+  &__modal-content {
+    position: relative;
+    background-color: $container-color;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  &__modal-services {
+    row-gap: 1rem;
+  }
+
+  &__modal-service {
+    display: flex;
+  }
+
+  &__modal-title {
+    font-size: $h3-font-size;
+    font-weight: $font-medium;
+    margin-bottom: $mb-1-5;
+  }
+  &__modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: $first-color;
+    cursor: pointer;
+  }
+
+  &__modal-icon {
+    color: $first-color;
+    margin-right: $mb-0-25;
+  }
+}
+
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
