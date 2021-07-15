@@ -115,6 +115,79 @@ img {
   }
 }
 
+/*============================= CUSTOM ICONS ==================================*/
+
+.upwork__icon {
+  width: 1.25rem;
+  fill: $first-color;
+  &:hover {
+    fill: $first-color-alt;
+  }
+}
+
+.fiverr__icon {
+  width: 0.85rem;
+  fill: $first-color;
+  &:hover {
+    fill: $first-color-alt;
+  }
+}
+
+.upwork__icon-footer {
+  width: 1.25rem;
+  fill: #fff;
+  &:hover {
+    fill: $first-color-lighter;
+  }
+}
+
+.fiverr__icon-footer {
+  width: 0.9rem;
+  fill: #fff;
+  &:hover {
+    fill: $first-color-lighter;
+  }
+}
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: $first-color;
+  opacity: 0.8;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
+  z-index: $z-tooltip;
+  transition: 0.4s;
+  &:hover {
+    background-color: $first-color-alt;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
+
+.show-scroll {
+  bottom: 5rem;
+}
+
+/*============================= SCROLL BAR ==================================*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: $scroll-bar-color;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scroll-thumb-color;
+  border-radius: 0.5rem;
+  &:hover {
+    background-color: $text-color-light;
+  }
+}
+
 /*============================= IMPORTS ==================================*/
 
 @import "nav-bar";
@@ -126,3 +199,6 @@ img {
 @import "_portfolio";
 @import "_projects";
 @import "testimonial";
+@import "contact";
+@import "footer";
+@import "change-theme";

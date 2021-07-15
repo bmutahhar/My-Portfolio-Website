@@ -1,6 +1,10 @@
 .project {
   text-align: center;
 
+  &__container {
+    row-gap: 1rem;
+  }
+
   &__bg {
     background-color: $first-color-second;
     padding-top: 3rem;
@@ -17,7 +21,8 @@
   }
 
   &__img {
-    width: 230px;
+    width: 240px;
     justify-self: center;
+    transform: translateZ(0);
   }
 }

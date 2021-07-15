@@ -1,3 +1,6 @@
+/*========== Colors ==========*/
+/* Change favorite color */
+/*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 :root {
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
@@ -6,11 +9,16 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
+  --first-color-second: hsl(230, 69%, 61%);
+  --title-color: hsl(230, 8%, 15%);
+  --text-color: hsl(230, 8%, 45%);
+  --input-color: hsl(230, 70%, 96%);
+  --body-color: hsl(230, 60%, 99%);
+  --container-color: #fff;
+  --scroll-bar-color: hsl(230, 12%, 90%);
+  --scroll-thumb-color: hsl(230, 12%, 80%);
 }
 
-/*========== Colors ==========*/
-/* Change favorite color */
-/*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 /* HSL color mode */
 /*========== Font and typography ==========*/
 /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
@@ -46,15 +54,15 @@ body {
   margin: 0 0 3rem 0;
   font-family: "Poppins", sans-serif;
   font-size: var(--normal-font-size);
-  background-color: #fbfbfe;
-  color: #6a6d7c;
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: #232429;
+  color: var(--title-color);
   font-weight: 600;
 }
 
@@ -156,6 +164,85 @@ img {
   background-color: #fff;
 }
 
+/*============================= CUSTOM ICONS ==================================*/
+.upwork__icon {
+  width: 1.25rem;
+  fill: #576ee0;
+}
+
+.upwork__icon:hover {
+  fill: #435acb;
+}
+
+.fiverr__icon {
+  width: 0.85rem;
+  fill: #576ee0;
+}
+
+.fiverr__icon:hover {
+  fill: #435acb;
+}
+
+.upwork__icon-footer {
+  width: 1.25rem;
+  fill: #fff;
+}
+
+.upwork__icon-footer:hover {
+  fill: #b6c1fc;
+}
+
+.fiverr__icon-footer {
+  width: 0.9rem;
+  fill: #fff;
+}
+
+.fiverr__icon-footer:hover {
+  fill: #b6c1fc;
+}
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: #576ee0;
+  opacity: 0.8;
+  padding: 0 0.3rem;
+  border-radius: 0.4rem;
+  z-index: 10;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.scrollup:hover {
+  background-color: #435acb;
+}
+
+.scrollup__icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.show-scroll {
+  bottom: 5rem;
+}
+
+/*============================= SCROLL BAR ==================================*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9fa1ad;
+}
+
 /*============================= IMPORTS ==================================*/
 .header {
   width: 100%;
@@ -163,7 +250,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: 100;
-  background-color: #fbfbfe;
+  background-color: var(--body-color);
 }
 
 .nav {
@@ -181,7 +268,7 @@ img {
 }
 
 .nav__logo {
-  color: #232429;
+  color: var(--title-color);
   font-weight: 500;
 }
 
@@ -190,7 +277,7 @@ img {
 }
 
 .nav__toggle {
-  color: #232429;
+  color: var(--title-color);
   font-weight: 500;
   font-size: 1.1rem;
   cursor: pointer;
@@ -218,7 +305,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   font-size: var(--small-font-size);
-  color: #232429;
+  color: var(--title-color);
   font-weight: 500;
 }
 
@@ -243,13 +330,22 @@ img {
   color: #435acb;
 }
 
+.nav__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
     bottom: -100%;
     left: 0;
     width: 100%;
-    background-color: #fbfbfe;
+    background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
     -webkit-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
             box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
@@ -262,6 +358,15 @@ img {
 /*========== Show Menu ==========*/
 .show-menu {
   bottom: 0;
+}
+
+.active-link {
+  color: #576ee0;
+}
+
+.scroll-header {
+  -webkit-box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .home__container {
@@ -316,7 +421,7 @@ img {
 
 .home__subtitle {
   font-size: var(--h3-font-size);
-  color: #6a6d7c;
+  color: var(--text-color);
   font-weight: 500;
   margin-bottom: 0.75rem;
 }
@@ -346,31 +451,13 @@ img {
 
 .home__scroll-name {
   font-size: var(--small-font-size);
-  color: #232429;
+  color: var(--title-color);
   font-weight: 500;
   margin-right: 0.25rem;
 }
 
 .home__scroll-arrow {
   font-size: 1.25rem;
-}
-
-.upwork__icon {
-  width: 1.25rem;
-  fill: #576ee0;
-}
-
-.upwork__icon:hover {
-  fill: #435acb;
-}
-
-.fiverr__icon {
-  width: 0.85rem;
-  fill: #576ee0;
-}
-
-.fiverr__icon:hover {
-  fill: #435acb;
 }
 
 .about__img {
@@ -381,6 +468,8 @@ img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .about__description {
@@ -410,7 +499,7 @@ img {
   text-align: center;
   font-size: var(--h2-font-size);
   font-weight: 600;
-  color: #232429;
+  color: var(--title-color);
 }
 
 .about__button {
@@ -623,7 +712,7 @@ img {
 
 .services__content {
   position: relative;
-  background-color: #fff;
+  background-color: var(--container-color);
   padding: 3.5rem 0.5rem 1.25rem 1.5rem;
   border-radius: 0.25rem;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -686,7 +775,7 @@ img {
 
 .services__modal-content {
   position: relative;
-  background-color: #fff;
+  background-color: var(--container-color);
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
@@ -791,8 +880,12 @@ img {
   text-align: center;
 }
 
+.project__container {
+  row-gap: 1rem;
+}
+
 .project__bg {
-  background-color: #576ee0;
+  background-color: var(--first-color-second);
   padding-top: 3rem;
 }
 
@@ -808,9 +901,11 @@ img {
 }
 
 .project__img {
-  width: 230px;
+  width: 240px;
   -ms-grid-column-align: center;
       justify-self: center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .testimonial__data, .testimonial__header {
@@ -853,5 +948,154 @@ img {
 
 .swiper-container .swiper-pagination-testimonial {
   bottom: 0;
+}
+
+.contact__container {
+  row-gap: 3rem;
+}
+
+.contact__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.contact__icon {
+  font-size: 2rem;
+  color: #576ee0;
+  margin-right: 0.75rem;
+}
+
+.contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+}
+
+.contact__subtitle {
+  font-size: var(--small-font-size);
+}
+
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+
+.contact__label {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.contact__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.form--button {
+  outline: none;
+  border: none;
+}
+
+.footer {
+  padding-top: 2rem;
+}
+
+.footer__container {
+  row-gap: 3.5rem;
+}
+
+.footer__bg {
+  background-color: var(--first-color-second);
+  padding: 2rem 0 3rem;
+}
+
+.footer__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.footer__subtitle {
+  font-size: var(--small-font-size);
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+.footer__link:hover {
+  color: #b6c1fc;
+}
+
+.footer__socials {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 319px) {
+  .footer__socials {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.footer__social {
+  font-size: 1.25rem;
+  margin-right: 1.5rem;
+}
+
+.footer__social:hover {
+  color: #b6c1fc;
+}
+
+.footer__copy {
+  font-size: var(--smaller-font-size);
+  text-align: center;
+  color: #9fa1ad;
+  margin-top: 3rem;
+}
+
+.footer__title, .footer__subtitle, .footer__link, .footer__social {
+  color: #fff;
+}
+
+.change-theme {
+  font-size: 1.1rem;
+  color: var(--title-color);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  color: #576ee0;
+}
+
+body.dark-theme {
+  --first-color-second: hsl(230, 30%, 8%);
+  --title-color: hsl(230, 8%, 95%);
+  --text-color: hsl(230, 8%, 75%);
+  --input-color: hsl(230, 29%, 16%);
+  --body-color: hsl(230, 28%, 12%);
+  --container-color: hsl(230, 29%, 16%);
+  --scroll-bar-color: hsl(230, 12%, 48%);
+  --scroll-thumb-color: hsl(230, 12%, 36%);
 }
 /*# sourceMappingURL=main.css.map */

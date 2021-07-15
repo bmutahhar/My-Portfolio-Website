@@ -60,6 +60,11 @@
       color: $first-color-alt;
     }
   }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -80,4 +85,12 @@
 
 .show-menu {
   bottom: 0;
+}
+
+.active-link {
+  color: $first-color;
+}
+
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
