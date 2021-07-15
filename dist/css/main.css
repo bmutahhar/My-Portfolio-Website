@@ -1098,4 +1098,64 @@ body.dark-theme {
   --scroll-bar-color: hsl(230, 12%, 48%);
   --scroll-thumb-color: hsl(230, 12%, 36%);
 }
+
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .nav__menu {
+    padding: 2rem 0.25rem 4rem;
+  }
+  .nav__list {
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+  .home__content {
+    -ms-grid-columns: 0.25fr 3fr;
+        grid-template-columns: 0.25fr 3fr;
+  }
+  .home__blob {
+    width: 180px;
+  }
+  .skills__title {
+    font-size: var(--normal-font-size);
+  }
+  .qualification__data {
+    gap: 0.5rem;
+  }
+  .services__container {
+    -ms-grid-columns: max-content;
+        grid-template-columns: -webkit-max-content;
+        grid-template-columns: max-content;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .services__content {
+    padding: 1.5rem 3.5rem 1.25rem 1.5rem;
+  }
+  .services__modal {
+    padding: 0 0.5rem;
+  }
+  .project__img {
+    width: 200px;
+  }
+  .testimonial__data, .testimonial__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .testimonial__img {
+    margin-right: 0;
+    margin-bottom: 0.25rem;
+  }
+  .testimonial__data, .testimonial__description {
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=main.css.map */

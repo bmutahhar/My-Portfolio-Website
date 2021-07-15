@@ -1,0 +1,76 @@
+// For smaller devices
+
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: $mb-1;
+    margin-right: $mb-1;
+  }
+
+  .nav {
+    &__menu {
+      padding: 2rem 0.25rem 4rem;
+    }
+
+    &__list {
+      column-gap: 0;
+    }
+  }
+
+  .home {
+    &__content {
+      grid-template-columns: 0.25fr 3fr;
+    }
+
+    &__blob {
+      width: 180px;
+    }
+  }
+
+  .skills {
+    &__title {
+      font-size: $normal-font-size;
+    }
+  }
+
+  .qualification {
+    &__data {
+      gap: 0.5rem;
+    }
+  }
+
+  .services {
+    &__container {
+      grid-template-columns: max-content;
+      justify-content: center;
+    }
+    &__content {
+      padding: 1.5rem 3.5rem 1.25rem 1.5rem;
+    }
+
+    &__modal {
+      padding: 0 0.5rem;
+    }
+  }
+
+  .project__img {
+    width: 200px;
+  }
+
+  .testimonial {
+    &__data,
+    &__header {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__img {
+      margin-right: 0;
+      margin-bottom: $mb-0-25;
+    }
+
+    &__data,
+    &__description {
+      text-align: center;
+    }
+  }
+}
