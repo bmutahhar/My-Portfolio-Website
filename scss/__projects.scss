@@ -1,0 +1,23 @@
+.project {
+  text-align: center;
+
+  &__bg {
+    background-color: $first-color-second;
+    padding-top: 3rem;
+  }
+
+  &__title {
+    font-size: $h2-font-size;
+    margin-bottom: $mb-0-75;
+    color: #fff;
+  }
+  &__description {
+    margin-bottom: $mb-1-5;
+    color: #fff;
+  }
+
+  &__img {
+    width: 230px;
+    justify-self: center;
+  }
+}

@@ -107,6 +107,14 @@ img {
   }
 }
 
+.button--white {
+  background-color: #fff;
+  color: $first-color;
+  &:hover {
+    background-color: #fff;
+  }
+}
+
 /*============================= IMPORTS ==================================*/
 
 @import "nav-bar";
@@ -115,3 +123,6 @@ img {
 @import "skills";
 @import "qualifications";
 @import "services";
+@import "_portfolio";
+@import "_projects";
+@import "testimonial";
