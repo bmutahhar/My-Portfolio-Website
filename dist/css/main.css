@@ -161,7 +161,7 @@ img {
 }
 
 .button--white:hover {
-  background-color: #fff;
+  background-color: #ebebeb;
 }
 
 /*============================= CUSTOM ICONS ==================================*/
@@ -1001,6 +1001,7 @@ img {
 .form--button {
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .footer {
@@ -1394,8 +1395,7 @@ body.dark-theme {
 
 @media screen and (min-width: 1024px) {
   .header,
-  .main,
-  .footer__container {
+  .main {
     padding: 0;
   }
   .home__blob {
@@ -1435,6 +1435,13 @@ body.dark-theme {
   .contact__inputs {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .footer__container {
+    padding: 0 2rem;
+    max-width: initial;
+  }
+  .footer__links, .footer__socials {
+    margin-top: 0.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

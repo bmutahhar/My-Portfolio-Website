@@ -344,8 +344,7 @@ $laptop-devices: 1024px;
 
 @include query-min-width($laptop-devices) {
   .header,
-  .main,
-  .footer__container {
+  .main {
     padding: 0;
   }
 
@@ -394,6 +393,18 @@ $laptop-devices: 1024px;
 
     &__inputs {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .footer {
+    &__container {
+      padding: 0 2rem;
+      max-width: initial;
+    }
+
+    &__links,
+    &__socials {
+      margin-top: 0.5rem;
     }
   }
 }
