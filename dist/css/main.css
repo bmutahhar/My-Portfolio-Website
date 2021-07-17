@@ -594,7 +594,7 @@ img {
   width: 85%;
 }
 
-.skills__sass, .skills__mongo {
+.skills__sass, .skills__mongo, .skills__next {
   width: 75%;
 }
 
@@ -1099,7 +1099,7 @@ body.dark-theme {
   --scroll-thumb-color: hsl(230, 12%, 36%);
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -1317,8 +1317,8 @@ body.dark-theme {
         grid-template-columns: 0.7fr;
   }
   .services__container {
-    -ms-grid-columns: 220px 220px 220px;
-        grid-template-columns: 220px 220px 220px;
+    -ms-grid-columns: 250px 250px;
+        grid-template-columns: 250px 250px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1405,8 +1405,8 @@ body.dark-theme {
             transform: translateX(-5rem);
   }
   .services__container {
-    -ms-grid-columns: 250px 250px 250px;
-        grid-template-columns: 250px 250px 250px;
+    -ms-grid-columns: 300px 300px;
+        grid-template-columns: 300px 300px;
   }
   .portfolio__content {
     -webkit-column-gap: 5rem;

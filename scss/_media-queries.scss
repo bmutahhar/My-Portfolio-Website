@@ -1,4 +1,4 @@
-$small-devices: 350px;
+$small-devices: 360px;
 $medium-devices: 568px;
 $tablet-devices: 768px;
 $laptop-devices: 1024px;
@@ -269,7 +269,7 @@ $laptop-devices: 1024px;
 
   .services {
     &__container {
-      grid-template-columns: 220px 220px 220px;
+      grid-template-columns: 250px 250px;
       justify-content: center;
     }
 
@@ -359,7 +359,7 @@ $laptop-devices: 1024px;
   }
 
   .services__container {
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: 300px 300px;
   }
 
   .portfolio__content {
