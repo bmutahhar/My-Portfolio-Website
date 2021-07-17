@@ -201,3 +201,16 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// iTyped.js
+
+const ityped_text = document.getElementById("ityped-text");
+ityped.init(ityped_text, {
+  showCursor: true,
+  strings: [
+    "Full Stack Developer.",
+    "Python Developer.",
+    "Automation Expert.",
+    "Freelancer.",
+  ],
+});

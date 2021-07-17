@@ -473,8 +473,7 @@ img {
 }
 
 .about__description {
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: initial;
   margin-bottom: 2.5rem;
 }
 
