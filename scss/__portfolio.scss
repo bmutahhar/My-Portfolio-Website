@@ -5,12 +5,14 @@
 
   &__content {
     padding: 0 1.5rem;
+    transform: translateZ(0);
   }
 
   &__img {
     width: 265px;
     border-radius: 0.5rem;
     justify-self: center;
+    transform: translateZ(0);
   }
 
   &__title {

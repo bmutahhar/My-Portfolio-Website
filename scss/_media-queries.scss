@@ -289,7 +289,7 @@ $laptop-devices: 1024px;
 
   .portfolio {
     &__img {
-      width: 320px;
+      width: 350px;
     }
 
     &__content {
@@ -378,7 +378,8 @@ $laptop-devices: 1024px;
     left: -3.5rem;
   }
 
-  .swiper-container-horizontal > .swiper-pagination-bullets {
+  .portfolio__container.swiper-container-horizontal
+    > .swiper-pagination-bullets {
     bottom: -4.5rem;
   }
 

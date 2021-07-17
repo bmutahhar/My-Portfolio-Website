@@ -243,6 +243,28 @@ img {
   background-color: #9fa1ad;
 }
 
+/*============================= iTyped.js ==================================*/
+.ityped-cursor {
+  font-size: var(--h3-font-size);
+  opacity: 1;
+  -webkit-animation: blink 0.45s infinite;
+  animation: blink 0.45s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
 /*============================= IMPORTS ==================================*/
 .header {
   width: 100%;
@@ -820,6 +842,8 @@ img {
 
 .portfolio__content {
   padding: 0 1.5rem;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .portfolio__img {
@@ -827,6 +851,8 @@ img {
   border-radius: 0.5rem;
   -ms-grid-column-align: center;
       justify-self: center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 .portfolio__title {
@@ -1334,7 +1360,7 @@ body.dark-theme {
     padding: 1.5rem 1.5rem 2.5rem;
   }
   .portfolio__img {
-    width: 320px;
+    width: 350px;
   }
   .portfolio__content {
     -webkit-box-align: center;
@@ -1421,7 +1447,8 @@ body.dark-theme {
   .swiper-button-prev {
     left: -3.5rem;
   }
-  .swiper-container-horizontal > .swiper-pagination-bullets {
+  .portfolio__container.swiper-container-horizontal
+> .swiper-pagination-bullets {
     bottom: -4.5rem;
   }
   .contact__form {

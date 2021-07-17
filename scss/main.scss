@@ -188,6 +188,35 @@ img {
   }
 }
 
+/*============================= iTyped.js ==================================*/
+
+.ityped-cursor {
+  font-size: $h3-font-size;
+  opacity: 1;
+  -webkit-animation: blink 0.45s infinite;
+  -moz-animation: blink 0.45s infinite;
+  animation: blink 0.45s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  100% {
+    opacity: 0;
+  }
+}
+
 /*============================= IMPORTS ==================================*/
 
 @import "nav-bar";
